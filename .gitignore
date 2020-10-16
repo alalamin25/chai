@@ -7,3 +7,4 @@ src/Buggy_Context_Abstraction/abstraction/.settings/
 src/Continuous_Learning/Defects4J_patches/*
 src/Continuous_Learning/models/*
 __pycache__/
+alamin/local/*
