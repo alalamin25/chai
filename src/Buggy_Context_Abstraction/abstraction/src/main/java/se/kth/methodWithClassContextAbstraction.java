@@ -154,7 +154,9 @@ public static CtMethod getTopLevelMethod(CtMethod ctMethod) {
 public static CtMethod getTopLevelMethod(CtElement ctElement) {
         CtMethod topLevelMethod = null;
         topLevelMethod = ctElement.getParent(CtMethod.class);
+        System.out.println("ctElement.getParent(CtMethod.class) ");
         while(topLevelMethod != null && topLevelMethod.getParent(CtMethod.class) != null) {
+                System.out.println("Inside while loop ");
                 topLevelMethod = topLevelMethod.getParent(CtMethod.class);
         }
         return topLevelMethod;
