@@ -39,7 +39,7 @@ WORKDIR /SequenceR
 
 COPY . /SequenceR
 
-RUN /SequenceR/src/setup_env.sh
+RUN bash /SequenceR/src/setup_env.sh
 ENV data_path=/SequenceR/data
 ENV OpenNMT_py=/SequenceR/src/lib/OpenNMT-py
 
@@ -49,5 +49,5 @@ ENV PERL_MM_USE_DEFAULT 1
 RUN git clone https://github.com/rjust/defects4j /SequenceR/src/lib/defects4j
 RUN cpan App::cpanminus
 RUN cpanm --installdeps /SequenceR/src/lib/defects4j/
-RUN /SequenceR/src/lib/defects4j/init.sh
+RUN bash /SequenceR/src/lib/defects4j/init.sh
 ENV PATH="${PATH}:/SequenceR/src/lib/defects4j/framework/bin"
