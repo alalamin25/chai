@@ -45,7 +45,7 @@ public final class MonotonicAppendingLongBuffer extends AbstractAppendingLongBuf
    *  @param pageSize         the size of a single page */
   public MonotonicAppendingLongBuffer(int initialPageCount, int pageSize) {
     super(initialPageCount, pageSize);
-    <BUG_START> averages = new float[pageSize]; <BUG_END>
+    <START_BUG> averages = new float[pageSize]; <END_BUG>
   }
 
   /** Create an {@link MonotonicAppendingLongBuffer} with initialPageCount=16
